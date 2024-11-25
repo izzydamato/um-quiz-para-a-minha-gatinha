@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz da Saudade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    .sim {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .nao {
+      background-color: #f44336;
+      color: white;
+    }
+    .message {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz da Saudade</h1>
+  <p>Sentiu saudades de ser perturbada o tempo todo?</p>
+  <button class="sim" onclick="showResult('sim')">Sim!!</button>
+  <button class="nao" onclick="showResult('nao')">Não!</button>
+
+  <div id="result" class="message"></div>
+
+  <script>
+    function showResult(answer) {
+      const resultDiv = document.getElementById('result');
+      if (answer === 'sim') {
+        resultDiv.innerHTML = `
+          <p>AAAAAAAA EU SABIAAAAAAA</p>
+          <p>Você não vive sem mim, que fofa você 🥰</p>
+          <p>Não se preocupe bê, irei ser mais insuportável do que antes 😍</p>
+          <img src="https://okcomentei.com.br/wp-content/uploads/2024/02/gif-fofocachorro-com-flor.gif" alt="Imagem fofa">
+        `;
+      } else if (answer === 'nao') {
+        resultDiv.innerHTML = `
+          <p>Nossa, como tu é falsa em mulher??? beleza pô</p>
+          <p>Também não senti saudades não, quando precisar de caneta</p>
+          <p>Não me procure não que eu não sou Le Biscuit não ô mana</p>
+          <img src="https://media1.tenor.com/m/U0sVV9QFit8AAAAC/monkey-side-eye-meme.gif" alt="Macaco">
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
